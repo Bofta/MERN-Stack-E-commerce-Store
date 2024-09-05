@@ -27,7 +27,8 @@ router.post("/auth", loginUser);
 // Route to logout the current User/Admin
 router.post("/logout", logoutCurrentUser);
 // Route to authenticate the user in order to get the current user profile first
-router.route('/profile').get(authenticate, getCurrentUserProfile).put(authenticate, updateCurrentUserProfile);
+router.route('/profile').get(authenticate, getCurrentUserProfile)
+                        .put(authenticate, updateCurrentUserProfile);
 
 
 // ADMIN ROUTES 🛠️
