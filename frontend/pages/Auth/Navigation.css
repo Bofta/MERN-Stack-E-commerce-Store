@@ -17,6 +17,10 @@
 }
 
 #navigation-container:hover .nav-item-name {
+<<<<<<< HEAD
   display: block;
+=======
+  display: inline-block;
+>>>>>>> 10731ae365a868e74e2a5a7d0aeb3d6d90b086a3
   opacity: 1;
 }
