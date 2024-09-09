@@ -10,8 +10,14 @@ import { FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Navigation.css";
+import { useSelector, useDispatch } from "react-redux";
+import { useLogoutMutation, useLoginMutation } from "../../redux/api/usersApiSlice";
+import { logout } from "./../../redux/features/auth/authSlice.js";
+
 
 const Navigation = () => {
+  const {userInfo} = useSelector(state => state.auth);
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
 
@@ -26,6 +32,22 @@ const Navigation = () => {
   const closeSidebar = () => {
     setShowSidebar(!showSidebar);
   }
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [logoutApiCall] = useLoginMutation();
+
+  const logoutHandler = async () => {
+    try {
+      await logoutApiCall().unwrap();
+      dispatch(logout());
+      navigate("/login");
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  
 
   return (
     <div
@@ -55,7 +77,7 @@ const Navigation = () => {
         <Link to="/cart" className="flex relative">
           <div className="flex items-center transition-transform transform hover:translate-x-2">
             <AiOutlineShoppingCart className="mt-[3rem] mr-2" size={26} />
-            <span className="hidden nav-item-name mt-[3rem]">Cart</span>{" "}
+            <span className="hidden nav-item-name mt-[3rem]">CART</span>{" "}
           </div>
         </Link>
 
@@ -65,6 +87,14 @@ const Navigation = () => {
             <span className="hidden nav-item-name mt-[3rem]">FAVORITE</span>{" "}
           </div>
         </Link>
+    </div>
+
+    <div className="relative">
+      <button onClick={toggleDropdown} className="flex items-center text-gray-8000 
+      focus:outline-none"
+      >
+        {userInfo ? <span className="text-white">{userInfo.username}</span> : (<></>)}
+      </button>
     </div>
         
 
@@ -84,7 +114,7 @@ const Navigation = () => {
                 className="flex items-center mt-5 transition-transform transform hover:translate-x-2"
               >
                 <AiOutlineUserAdd size={26} />
-                <p className="hidden nav-item-name">REGISTER</p>
+                <span className="hidden nav-item-name">REGISTER</span>
               </Link>
             </li>
           </ul>
