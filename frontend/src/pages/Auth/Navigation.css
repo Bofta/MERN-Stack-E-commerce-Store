@@ -2,11 +2,11 @@
   width: 4%;
   transition: width 0.3s ease-in-out;
   overflow: hidden; /* Hide overflowing content during transition */
-  color: rgb(232, 70, 70);
+  color: rgb(213, 213, 213);
 }
 
 #navigation-container:hover {
-  width: 25%;
+  width: 15%;
 }
 
 /* Initially hide nav-item-name */
