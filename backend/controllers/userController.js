@@ -1,4 +1,4 @@
-// User controller file where all the user/admin functions exists
+// User controller file where all the user/admin functions exists and all CRUD opertaions for Admin and specific functions for the user
 import User from "../models/userModel.js";
 import asyncHandler from "../middlewares/asyncHandler.js";
 import bcrypt from 'bcryptjs';
