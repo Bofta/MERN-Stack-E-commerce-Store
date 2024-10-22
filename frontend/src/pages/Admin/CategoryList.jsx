@@ -4,7 +4,7 @@ import {
   useUpdateCategoryMutation,
   useDeleteCategoryMutation,
   useFetchCategoriesQuery,
-} from "../../../redux/api/categoryApiSlice";
+} from "../../redux/api/categoryApiSlice";
 
 import { toast } from "react-toastify";
 import CategoryForm from "../../components/CategoryForm";

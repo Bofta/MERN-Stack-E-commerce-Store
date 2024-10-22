@@ -11,8 +11,8 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Navigation.css";
 import { useSelector, useDispatch } from "react-redux";
-import { useLogoutMutation } from "../../../redux/api/usersApiSlice.js";
-import { logout } from "../../../redux/features/auth/authSlice.js"
+import { useLogoutMutation } from "../../redux/api/usersApiSlice.js";
+import { logout } from "../../redux/features/auth/authSlice.js"
 
 
 

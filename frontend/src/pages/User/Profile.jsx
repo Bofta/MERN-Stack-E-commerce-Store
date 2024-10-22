@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 
 import Loader from "../../components/Loader";
-import { useProfileMutation } from "../../../redux/api/usersApiSlice";
-import { setCredentials } from "../../../redux/features/auth/authSlice";
+import { useProfileMutation } from "../../redux/api/usersApiSlice";
+import { setCredentials } from "../../redux/features/auth/authSlice";
 import { Link } from "react-router-dom";
 
 const Profile = () => {

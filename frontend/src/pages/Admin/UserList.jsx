@@ -7,7 +7,7 @@ import {
     useGetUsersQuery,
   useDeleteUserMutation,
   useUpdateUserMutation,
-} from "../../../redux/api/usersApiSlice.js";
+} from "../../redux/api/usersApiSlice.js";
 
 import AdminMenu from "./AdminMenu.jsx";
 

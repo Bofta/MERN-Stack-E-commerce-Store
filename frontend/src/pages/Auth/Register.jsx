@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch} from "react-redux";
 import Loader from "../../components/Loader";
-import { setCredentials } from "../../../redux/features/auth/authSlice";
+import { setCredentials } from "../../redux/features/auth/authSlice";
 import { toast } from "react-toastify";
-import { useRegisterMutation } from "../../../redux/api/usersApiSlice";
+import { useRegisterMutation } from "../../redux/api/usersApiSlice";
 
 
 const Register = () => {
