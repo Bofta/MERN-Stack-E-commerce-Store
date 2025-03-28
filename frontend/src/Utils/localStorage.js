@@ -1,3 +1,12 @@
+
+// Retrive favorites from a localStorage
+export const getFavoritesFromLocalStorage = () => {
+const favoritesJSON = localStorage.getItem("favorites");
+return favoritesJSON ? JSON.parse(favoritesJSON) : [];
+};
+
+
+
 // Add a product to a localStorage
 export const addFavoriteToLocalStorage = (product) => {
     const favorites = getFavoritesFromLocalStorage();
@@ -16,9 +25,4 @@ export const addFavoriteToLocalStorage = (product) => {
   
     localStorage.setItem("favorites", JSON.stringify(updateFavorites));
   };
-  
-  // Retrive favorites from a localStorage
-  export const getFavoritesFromLocalStorage = () => {
-    const favoritesJSON = localStorage.getItem("favorites");
-    return favoritesJSON ? JSON.parse(favoritesJSON) : [];
-  };
+

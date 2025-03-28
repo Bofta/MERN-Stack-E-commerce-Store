@@ -13,10 +13,6 @@ import AdminMenu from "./AdminMenu.jsx";
 
 
 
-
-
-
-
 const UserList = () => {
     
   const { data: users, refetch, isLoading, error } = useGetUsersQuery();

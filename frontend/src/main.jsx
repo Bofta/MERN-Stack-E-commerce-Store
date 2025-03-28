@@ -36,17 +36,18 @@ const router = createBrowserRouter(
             <Route path="/profile" element={<Profile />} />
         </Route>
 
+
+
         {/* Admin Route */}
         <Route path="/admin" element={<AdminRoute />}>
             <Route path="userlist" element={<UserList />} />
             <Route path="categorylist" element={<CategoryList />} />
             <Route path="productlist" element={<ProductList />} />
-            <Route path="allProducts" element={<AllProducts />} />
-            <Route path="product/update/:id" element={<ProductUpdate />} />
+            <Route path="allproductslist" element={<AllProducts />} />
+            <Route path="productlist/:pageNumber" element={<ProductList />} />
+            <Route path="product/update/:_id" element={<ProductUpdate />} />
         </Route>
-
-            
-        </Route>
+    </Route>
     )
 );
 

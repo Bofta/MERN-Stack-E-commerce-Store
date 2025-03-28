@@ -2,7 +2,7 @@
   "name": "mern-stack-e-commerce-",
   "version": "1.0.0",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "backend": "nodemon backend/index.js",
     "frontend": "npm run dev --prefix frontend",
@@ -13,6 +13,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "18": "*",
     "bcryptjs": "^2.4.3",
     "concurrently": "^8.2.2",
     "cookie-parser": "^1.4.6",
