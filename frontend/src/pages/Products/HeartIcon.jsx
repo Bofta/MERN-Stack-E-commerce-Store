@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { FaHeart, FaRegHeart, FaVaadin } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
