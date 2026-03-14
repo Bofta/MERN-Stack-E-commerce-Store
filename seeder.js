@@ -44,9 +44,7 @@ const categories = [
 const importData = async () => {
   try {
     // Clear existing data
-    await User.deleteMany();
-    await Category.deleteMany();
-    await Product.deleteMany();
+    
 
     // Insert users and categories
     const createdUsers = await User.insertMany(users);
@@ -228,3 +226,4 @@ if (process.argv[2] === "-d") {
 } else {
   importData();
 }
+
